@@ -1,3 +1,21 @@
+
+# Zero-Block Governance Freeze PoC
+
+This repository contains a Foundry-based proof-of-concept demonstrating how a zero-block
+governance freeze mitigates flash-loan and flash-mint voting attacks.
+
+## Structure
+- `src/MockVotesToken.sol`: Vote token with historical snapshots
+- `src/GovNoFreeze.sol`: Baseline governance (vulnerable)
+- `src/GovFreeze.sol`: Governance with zero-block freeze
+- `src/FlashMint.sol`: Flash-mint primitive
+- `src/Attacker.sol`: Attack coordinator
+- `test/ZeroBlockFreeze.t.sol`: Foundry tests validating the attack and mitigation
+
+## Running tests
+```bash
+forge test -vv
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
